@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  app:
+    container_name: finance_manager
+    build: .
+    ports:
+      - 4500:4500
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=finance_manager
+    volumes:
+      - ./logs:/usr/src/app/logs
+    depends_on:
+      - db
+    
+  db:
+    container_name: db
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=finance_manager
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - 5050:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+
+volumes:
+  pgdata: {}
