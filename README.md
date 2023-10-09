@@ -17,13 +17,13 @@ This is an API for managing users' financial transactions, including viewing use
 ```bash
  docker-compose up
 ```
-### Will be launched
+### Will be launched:
 * [http://localhost:4500/](http://localhost:4500/) – API URL
 * [http://localhost:4500/swagger#/](http://localhost:4500/swagger#/) - Swagger documentation
 * [http://localhost:5050/](http://localhost:5050/) – pgAdmin *email: admin@admin.com, password: root*
 
 
-The logs.json file contains logs for each CREATE/UPDATE/DELETE payment operation
+A /logs directory is created in the root directory, containing the logs.json file. The logs.json file contains logs for each CREATE/UPDATE/DELETE payment operation
 ### Each log contains:
 * Type of payment
 * Payment category
