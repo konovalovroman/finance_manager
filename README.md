@@ -100,5 +100,5 @@ volumes:
   pgdata: {}
 ```
 
-#####Then in this directory run `docker-compose up`
+Then in this directory run `docker-compose up`
 It will run an API on same URLs and the */logs* directory will also be created
