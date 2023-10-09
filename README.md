@@ -45,6 +45,7 @@ DB_NAME=
 ```
 #### Running application with yarn
 ```bash
+ yarn migration:run
  yarn start
 ```
 
