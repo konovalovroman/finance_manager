@@ -11,6 +11,7 @@ This is an API for managing users' financial transactions, including viewing use
 ```bash
  git clone https://github.com/konovalovroman/finance_manager.git
  cd finance_manager
+ yarn install
 ```
 
 ## Running the app
